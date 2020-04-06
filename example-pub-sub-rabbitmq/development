@@ -1,0 +1,12 @@
+```
+$ etcd
+```
+
+```
+$ rabbitmq-server
+```
+
+```
+$ go build -v
+$ ./example-pub-sub-rabbitmq
+```

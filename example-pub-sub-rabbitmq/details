@@ -1,0 +1,34 @@
+This is with respect to this question
+
+https://community.micro.mu/t/could-someone-provide-me-an-example-to-publish-and-subscribe-topics-from-rabbitmq/52
+
+I'm making sure I have `etcd` and `rabbitmq-server` in my local. Just now installing
+`rabbitmq` with `brew install rabbitmq`
+
+Okay, so rabbitmq is installed. I tried running it with this
+
+```
+$ /usr/local/Cellar/rabbitmq/3.8.3/sbin/rabbitmq-server
+```
+
+and it runs, which I'm able to check with
+
+```
+$ /usr/local/Cellar/rabbitmq/3.8.3/sbin/rabbitmqctl ping
+$ /usr/local/Cellar/rabbitmq/3.8.3/sbin/rabbitmqctl status
+```
+
+But I think I can stick with `brew services start rabbitmq` 🤔 But it said
+something about the service restarting at login too. Not sure about that and I
+don't want it to be always running, so, I guess the above is okay
+
+Okay, so I got the code, and I don't know much about rabbitmq except that it's
+a message broker and here they are using it for publish subscribe
+
+So, I went to http://localhost:15672 - the rabbitmq dashboard and there found a
+thing called Exchange and I created an Exchange named `ExchangeName` of type
+`direct` after reading something about it. I also published a message with
+`RoutingKey` value as `topic` and it didn't work. Hmm. The OP (Original Poster)
+has also asked if we can give a working code for pub sub with rabbitmq. I think
+that's a better thing to do first, to understand how it's all working!
+

@@ -1,0 +1,5 @@
+# etcd files
+default.etcd/
+
+# binary
+example-pub-sub-rabbitmq
